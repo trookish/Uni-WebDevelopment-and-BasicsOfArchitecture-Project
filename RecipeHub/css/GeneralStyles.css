@@ -1,0 +1,353 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #222;
+    color: #fff;
+}
+
+header {
+    text-align: center;
+    padding: 2rem;
+}
+
+h1 {
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+}
+
+form {
+    margin: 1rem 0;
+}
+
+#search-input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: #333;
+    color: #fff;
+    width: 200px;
+    text-align: center;
+}
+
+.animated-title {
+    animation: slideUp 2s forwards;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+.container {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.banner {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    scroll-behavior: smooth; /* Smooth scrolling effect */
+    width: 120%; /* Increase width to allow for more scrollable space */
+    padding: 10px
+}
+
+.banner::-webkit-scrollbar {
+    display: none; /* Hides the scrollbar for a cleaner look */
+}
+
+.recipe-banner {
+    position: relative;
+    min-width: 250px; /* Increased width */
+    height: 250px; /* Increased height */
+    user-select: none; /* Disable text selection */
+}
+
+.recipe-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    pointer-events: none; /* Disable all interaction with the image */
+}
+
+.recipe-banner:hover img {
+    transform: scale(1.05); /* Optional zoom on hover */
+}
+
+.recipe-banner h3 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 0 0 8px 8px;
+}
+
+.recipe-banner:hover h3 {
+    opacity: 1;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.nav-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #45a049;
+}
+
+
+.recipe-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 21px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.recipe-card {
+    width: 200px;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.recipe-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.recipe-card a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.recipe-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.recipe-card:hover .recipe-image {
+    transform: scale(1.05);
+}
+
+.recipe-card h3 {
+    padding: 10px;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* Separate container for favorite button */
+.favorite-container {
+    padding: 0px;
+}
+
+.favorite-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #ff4d4d;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.favorite-button:hover {
+    transform: scale(1.2);
+    color: #ff6666;
+}
+
+.favorite-button:active {
+    transform: scale(1);
+}
+
+p {
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 20px;
+    color: #bbb;
+}
+
+p a {
+    color: #ff4d4d;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+p a:hover {
+    color: #ff6666;
+}
+
+.category-dropdown {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#category-select {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+}
+
+.recipe-detail-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.recipe-detail-content {
+    display: flex;
+    gap: 20px;
+    align-items: stretch; /* Ensures the image and info align to the same height */
+    max-width: 1000px;
+    width: 100%;
+}
+
+.recipe-detail-image {
+    width: 100%;
+    object-fit: cover; /* Ensures the image scales proportionally */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.recipe-image-container {
+    flex: 1; /* Take up equal space as the info section */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.recipe-info {
+    flex: 1; /* Take up equal space as the image container */
+    max-width: 600px;
+}
+
+.recipe-info h2 {
+    font-size: 1.8rem;
+    color: #ff6b6b;
+    margin-bottom: 10px;
+}
+
+.recipe-info p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #ddd;
+    margin-bottom: 20px;
+    background-color: #333;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.about-us-content {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #2c2c2c;
+    color: #f5f5f5;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.about-us-content h2 {
+    color: #4CAF50;
+    margin-top: 20px;
+}
+
+.about-us-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.reviews-section {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #2c2c2c;
+    border-radius: 8px;
+}
+
+.review {
+    border-bottom: 1px solid #444;
+    padding: 10px 0;
+    color: #f5f5f5;
+}
+
+.review strong {
+    font-size: 1.1rem;
+    color: #4CAF50;
+}
+
+.review span {
+    font-size: 0.9rem;
+    color: #ffd700; /* Gold color for ratings */
+    margin-bottom: 10px;
+}
+
+.review p {
+    margin: 5px 0;
+}
+
+.review small {
+    color: #777;
+    font-size: 0.8rem;
+}
+
+form h3 {
+    margin-top: 20px;
+    color: #4CAF50;
+}
+
+form input[type="text"],
+form input[type="number"],
+form textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #333;
+    color: #f5f5f5;
+}
+
+form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #45a049;
+}

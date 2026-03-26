@@ -1,0 +1,1 @@
+the database in use is xampp, use Apache and MySQL to use the database in the website
