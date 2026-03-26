@@ -85,6 +85,15 @@ The database `recipe_hub.sql` contains tables for:
 
 ## Team Members
 
+### Web Systems
+
+The following team members contributed to the database design, website design, and code implementation:
+
+- **Turki Alshalaan**
+- **Alwaleed Alhamdan**
+- **Tariq Alharbi**
+- **Meshari Alhussainan**
+
 ### Basics of Architecture
 
 The following team members contributed to the architectural design of the project:
@@ -94,14 +103,6 @@ The following team members contributed to the architectural design of the projec
 - **Fahad AlGhamdi**
 - **Meshari Alhussainan**
 
-### Web Systems
-
-The following team members contributed to the database design, website design, and code implementation:
-
-- **Turki Alshalaan**
-- **Alwaleed Alhamdan**
-- **Tariq Alharbi**
-- **Meshari Alhussainan**
 
 ## Installation
 
